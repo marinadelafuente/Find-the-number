@@ -1,9 +1,9 @@
-.form {
+.js-form {
     width: 170px;
     font-size: 14px;
 }
 
-.tryButton {
+.js-button {
     background: rgb(38, 161, 161);
     color: white;
     border-radius: 10px;
@@ -12,11 +12,12 @@
     height: 20px;
 }
 
-.tipMessage {
+.js-tipMessage {
     border: aqua solid 2px;
 }
 
-.counter {
+/* 
+.js-counter {
     border: aqua solid 2px;
 
-}
+} */
