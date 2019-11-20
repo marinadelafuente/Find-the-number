@@ -14,7 +14,7 @@ const randomNumber = generateRandomNumber(100);
 
 const compareNumber = function () {
 
-    const userNumberValue = userNumber.value;
+    const userNumberValue = parseInt(userNumber.value);
     console.log(randomNumber);
 
     if (userNumberValue > 100) {
