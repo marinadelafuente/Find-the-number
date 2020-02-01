@@ -1,23 +1,79 @@
-.js-form {
-    width: 170px;
-    font-size: 14px;
+body {
+    background: url('../images/numbers.jpg');
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Indie Flower', cursive;
+    text-transform: uppercase;
 }
 
-.js-button {
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    text-align: center;
+    max-height: 400px;
+    color: white;
+    border: 1px grey solid;
+    background-color: rgba(114, 69, 110, 0.644);
+    border-radius: 15px;
+    box-shadow: -2px 1px 21px 0px rgba(250, 245, 250, 0.67);
+}
+
+.container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    text-align: center;
+    max-height: 400px;
+}
+
+.title {
+    font-family: 'Dosis', sans-serif;
+}
+
+.form {
+    width: 300px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.input-label {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.user-number {
+    width: 35px;
+}
+
+.button {
+    font-family: 'Pacifico', cursive;
     background: rgb(38, 161, 161);
     color: white;
     border-radius: 10px;
-    margin-top: 15px;
-    width: 60px;
-    height: 20px;
+    width: 140px;
+    height: 48px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 25px;
+
 }
 
-.js-tipMessage {
-    border: aqua solid 2px;
+.tip-message {
+    text-transform: initial;
+    padding-top: 30px;
+    font-size: 20px;
 }
-
-/* 
-.js-counter {
-    border: aqua solid 2px;
-
-} */

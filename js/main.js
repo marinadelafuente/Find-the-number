@@ -6,7 +6,7 @@ const tipMessage = document.querySelector('.js-tipMessage');
 const counter = document.querySelector('.js-counter');
 
 const generateRandomNumber = function (max) {
-    console.log('Generando número aleatorio');
+    console.log('Generating random number');
     return Math.ceil(Math.random() * max);
 }
 
@@ -18,25 +18,23 @@ const compareNumber = function () {
     console.log(randomNumber);
 
     if (userNumberValue > 100) {
-        console.log('El número debe estar entre 0 y 100.');
-        return tipMessage.innerHTML = 'El número debe estar entre 0 y 100.';
+        console.log('The number must be between 0 and 100.');
+        return tipMessage.innerHTML = 'The number must be between 0 and 100.';
     } else if (userNumberValue === randomNumber) {
-        console.log('Has ganado');
-        return tipMessage.innerHTML = 'Has ganado campeona!!!';
+        console.log('You win');
+        return tipMessage.innerHTML = 'Oh, yeah. YOU WIN!!!';
     } else if (userNumberValue < randomNumber) {
-        console.log('Demasiado bajo.');
-        return tipMessage.innerHTML = `Demasiado bajo.`;
+        console.log('Too low.');
+        return tipMessage.innerHTML = `Too low...`;
     } else if (userNumberValue > randomNumber) {
-        console.log('Demasiado alto.');
-        return tipMessage.innerHTML = `Demasiado alto.`;
+        console.log('Too high.');
+        return tipMessage.innerHTML = `Not that high, mate.`;
     }
 }
 
-
-
 const handleEvent = function (ev) {
     ev.preventDefault();
-    console.log('Previene el evento');
+    console.log('Prevents the event');
     compareNumber();
 };
 
