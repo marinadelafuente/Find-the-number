@@ -12,16 +12,17 @@
 
 <body>
   <main class="main">
-    <h1 class="title">Guess the right number to win!</h1>
-
+    <h1 class="title js-title">Guess the right number to win!</h1>
+    <h1 class="js-lost-game lost-game hidden">Game over</h1>
     <div class="container">
       <form class="js-form form">
         <label class="input-label" for="userNumber">Write here your number:</label>
         <input class="js-userNumber user-number" id="userNumber" type="number" name="userNumber" />
       </form>
       <button class="js-button button">Try</button>
-      <p class="js-tipMessage tip-message">Write a number and hit the "try" button.</p>
-      <p class="js-counter"></p>
+      <button class="js-new-game-button button-new-game hidden">Try again</button>
+      <p class="js-tipMessage tip-message">Write a number between 0 and 100 <br> and hit the "try" button.</p>
+      <p class="js-counter counter">You have 4 attempts</p>
     </div>
   </main>
 
