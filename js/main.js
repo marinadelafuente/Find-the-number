@@ -7,6 +7,7 @@ const userNumber = document.querySelector('.js-userNumber');
 const tipMessage = document.querySelector('.js-tipMessage');
 const counter = document.querySelector('.js-counter');
 const gameLost = document.querySelector('.js-lost-game');
+const main = document.querySelector('.js-main');
 
 const generateRandomNumber = (max) => {
     return Math.ceil(Math.random() * max);
@@ -34,10 +35,12 @@ const compareNumber = () => {
     }
 }
 
-let times = 0;
+let times = 4;
+console.log(times);
+
 
 const count = () => {
-    if (times === 3) {
+    if (times === 1) {
         gameLost.classList.remove('hidden');
         title.classList.add('hidden');
         tipMessage.innerHTML = `Sorry, the number was ${randomNumber}`;
@@ -45,29 +48,35 @@ const count = () => {
         button.classList.add('hidden');
         newGameButton.classList.remove('hidden');
         form.classList.add('hidden');
+        main.classList.remove('background-game');
+        main.classList.add('background-lost');
     }
-    else if (userNumber !== randomNumber & times < 2) {
-        times++;
-        return counter.innerHTML = `You've tried ${times} times`;
+    else if ((times <= 2)) {
+        times--;
+        console.log(times);
+        return counter.innerHTML = `Only 1 left`;
     }
-    else if ((times === 2)) {
-        times++;
-        return counter.innerHTML = `Only 1 attempt left`;
+    else if (times <= 4) {
+        times--;
+        console.log(times);
+        return counter.innerHTML = `You have ${times} lives left`;
     }
     else {
-        counter.innerHTML = 'You have 4 attempts';
+        counter.innerHTML = 'You have 4 lives';
     }
 }
 
 const newGame = () => {
-    times = 0;
+    times = 4;
+    main.classList.remove('background-lost');
+    main.classList.add('background-game');
     gameLost.classList.add('hidden');
     title.classList.remove('hidden');
     button.classList.remove('hidden');
     newGameButton.classList.add('hidden');
     form.classList.remove('hidden');
     userNumber.value = '';
-    counter.innerHTML = 'You have 4 attempts';
+    counter.innerHTML = 'You have 4 lives';
     tipMessage.innerHTML = `Write a number between 0 and 100 <br> and hit the "try" button.`;
     compareNumber();
 }

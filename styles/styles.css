@@ -20,9 +20,22 @@ body {
     max-height: 400px;
     color: white;
     border: 1px grey solid;
-    background-color: rgba(114, 69, 110, 0.644);
+    /* background-color: rgba(114, 69, 110, 0.644); */
     border-radius: 15px;
     box-shadow: -2px 1px 21px 0px rgba(250, 245, 250, 0.67);
+}
+
+.background-game {
+    /* background: rgb(2, 0, 36);
+    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(96, 9, 121, 0.8841911764705882) 70%, rgba(59, 14, 111, 1) 100%); */
+    /* background-color: rgba(94, 57, 91, 0.74); */
+    background: rgb(2, 0, 36);
+    background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(73, 12, 92, 0.9290091036414566) 23%, rgba(66, 18, 121, 0.6601015406162465) 59%);
+}
+
+.background-lost {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(121, 9, 23, 0.8841911764705882) 50%, rgba(59, 14, 111, 1) 100%);
 }
 
 .container {
